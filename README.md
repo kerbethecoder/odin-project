@@ -1,4 +1,5 @@
-# odin-project
+# The Odin Project
 
-my odin-project github repo
-hello odin!
+## This will serve as documentation about my journey on taking up The Odin Project
+
+This will contain everything that I work on, like projects, lessons, etc.
