@@ -1,0 +1,109 @@
+/* colors
+475841
+3F403F
+AABD8C
+E9E3B4
+F39B6D
+*/
+
+/* NOTE */
+/* 1. Great background color. Must use for future projects. */
+/* 2. Good button component, can be used for future projects. */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+
+  color: #3f403f;
+  background: #eeeeee;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+body {
+  padding: 0px 250px;
+}
+
+.title {
+  font-family: Garamond, serif;
+  font-size: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 50px;
+}
+
+ion-icon:hover {
+  color: #475841;
+}
+
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 80px 0px 150px 0px;
+  gap: 340px;
+}
+
+.hero-left-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  gap: 10px;
+}
+
+.hero-heading {
+  font-family: Garamond, serif;
+  text-transform: uppercase;
+  font-size: 52px;
+}
+
+.hero-description {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 16px;
+}
+
+.quotes-container {
+  padding: 1em;
+  border-radius: 1em;
+
+  margin-bottom: 100px;
+}
+
+.recipes-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  margin: 80px 100px 30px 100px;
+}
+
+.footer p:first-child {
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif,
+    serif;
+  font-size: 20px;
+
+  padding: 0px 350px;
+  margin-bottom: 20px;
+}
+
+.footer p:last-child {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 16px;
+}

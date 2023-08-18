@@ -3,26 +3,136 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="customs.css" />
     <title>Odin Recipes</title>
   </head>
   <body>
-    <h1>Odin Recipes</h1>
-    <ul>
-      <!-- optional <a></a> attribute: 
-        target="_blank"
-        rel="noopener noreferrer"
-         -->
-      <li>
-        <a href="./recipes/deepFriedOreos.html">Deep Fried Oreos Recipe</a>
-      </li>
-      <li>
-        <a href="./recipes/funnelCakes.html">Funnel Cakes Recipe</a>
-      </li>
-      <li>
-        <a href="./recipes/grilledTurkeyLegs.html"
-          >Grilled Turkey Legs Recipe</a
-        >
-      </li>
-    </ul>
+    <h1 class="title">
+      Odin Recipes&nbsp;<ion-icon name="fast-food-outline" />
+    </h1>
+
+    <div class="hero-container">
+      <div class="hero-left-section">
+        <h2 class="hero-heading">
+          Best <span style="color: #f39b6d">Food</span> For <br />
+          Your
+          <span style="color: #aabd8c">Taste</span>
+        </h2>
+        <hr />
+        <p class="hero-description">
+          Explore a world of mouthwatering recipes, expert cooking tips, and
+          irresistible flavors that will elevate your dining experience. Whether
+          you're a seasoned chef or a kitchen novice, join us in celebrating the
+          art of cooking and savor the joy of creating delectable dishes.
+        </p>
+        <div>
+          <button class="custom-button" onclick="navToSection()">
+            Recipes
+          </button>
+          <button class="custom-button-about">About Us</button>
+        </div>
+      </div>
+      <img
+        src="assets/hero-food.png"
+        alt="food"
+        style="width: 450px; height: 100%"
+        class="hero-img"
+      />
+    </div>
+
+    <div class="quotes-container">
+      <blockquote>
+        A recipe has no soul. You, as the cook, must bring the soul to the
+        recipe.
+      </blockquote>
+      <cite>&mdash; Thomas Keller</cite>
+    </div>
+
+    <div class="recipes-container" id="recipe">
+      <a href="./recipes/deepFriedOreos.html" class="card">
+        <article>
+          <div class="article-wrapper">
+            <figure>
+              <img src="assets/deep-fried-oreos.jpg" alt="" />
+            </figure>
+            <div class="article-body">
+              <h2>Deep Fried Oreos</h2>
+              <p>
+                Deep-fried Oreos are a carnival favorite where I grew up. Oreos
+                get dipped into pancake batter and fried — yummy! You can do
+                this with or without a deep fryer.
+              </p>
+            </div>
+          </div>
+        </article>
+      </a>
+      <a href="./recipes/funnelCakes.html" class="card">
+        <article>
+          <div class="article-wrapper">
+            <figure>
+              <img src="assets/funnel-cakes.jpg" alt="" />
+            </figure>
+            <div class="article-body">
+              <h2>Funnel Cakes</h2>
+              <p>
+                A funnel cake is a popular dessert made by frying batter. The
+                fried dessert is liberally sprinkled with powdered sugar before
+                serving.
+              </p>
+            </div>
+          </div>
+        </article>
+      </a>
+      <a href="./recipes/grilledTurkeyLegs.html" class="card"
+        ><article>
+          <div class="article-wrapper">
+            <figure>
+              <img src="assets/grilled-turkey-legs.jpg" alt="" />
+            </figure>
+            <div class="article-body">
+              <h2>Grilled Turkey Legs</h2>
+              <p>
+                These spicy turkey legs are sweet and hot—just like the smoked
+                turkey legs you get at the fair or theme park!
+              </p>
+            </div>
+          </div>
+        </article></a
+      >
+    </div>
+
+    <hr
+      style="
+        margin-top: 100px;
+        background: #333;
+        background-image: linear-gradient(to right, #ccc, #aabd8c, #ccc);
+      "
+    />
+
+    <div class="footer" id="footer">
+      <p>
+        This is for educational purposes only. All the images, statements, and
+        other contents belong to their respectful owners. The website is only
+        for compliance with the lesson of The Odin Project
+      </p>
+      <p>@kerbethecoder | Web Developer | &copy; 2023</p>
+    </div>
+
+    <script>
+      function navToSection() {
+        const section = document.getElementById('recipe');
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    </script>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>

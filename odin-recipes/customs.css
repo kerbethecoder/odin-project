@@ -1,0 +1,147 @@
+/* custom hr */
+hr {
+  border: 0;
+  height: 1px;
+  background: #333;
+  background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
+
+/* custom button */
+.custom-button {
+  color: white;
+  background: linear-gradient(to right, #3f403f, #475841);
+  border-radius: 8px;
+  transition: 0.2s ease-in-out;
+
+  /* padding: 15px 20px; */
+  font-size: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  margin: 1em;
+
+  width: 150px;
+  height: 50px;
+}
+
+.custom-button:hover {
+  border-radius: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.custom-button-about {
+  color: #000;
+  border-radius: 8px;
+  transition: 0.2s ease-in-out;
+
+  font-size: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  margin: 1em;
+
+  width: 150px;
+  height: 50px;
+}
+
+.custom-button-about:hover {
+  border-radius: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* custom blockqoute */
+
+blockquote {
+  padding: 50px 80px 10px;
+  position: relative;
+  font-size: 28px;
+  text-align: center;
+}
+
+blockquote::before {
+  content: open-quote;
+}
+
+blockquote:after {
+  content: '';
+  top: 20px;
+  left: 50%;
+  margin-left: -100px;
+  position: absolute;
+  border-bottom: 3px solid #aabd8c;
+  height: 3px;
+  width: 200px;
+}
+
+cite {
+  display: flex;
+  justify-content: center;
+}
+
+/* custom card */
+.card {
+  display: block;
+  max-width: 400px;
+  margin-inline: auto;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: none;
+  background: #fff;
+  transform-origin: center center;
+  transition: all 0.4s ease-in-out;
+  text-decoration: none;
+  color: #3f403f;
+
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.card h2,
+.card .read-more {
+  transition: color 0.4s ease-in-out;
+}
+
+.card img {
+  transform-origin: center;
+  transition: transform 0.4s ease-in-out;
+}
+
+.card:hover,
+.card:focus,
+.card:hover h2,
+.card:focus h2 {
+  color: #aabd8c;
+}
+
+.card:hover img,
+.card:focus img {
+  transform: scale(1.1);
+}
+
+.article-body {
+  padding: 24px;
+}
+
+.card h2 {
+  margin: 0 0 18px 0;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 1.9rem;
+  letter-spacing: 0.06em;
+  transition: color 0.3s ease-out;
+}
+
+img {
+  max-width: 100%;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
