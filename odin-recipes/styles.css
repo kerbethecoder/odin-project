@@ -25,6 +25,8 @@ a {
   text-decoration: none;
 }
 
+/* generic styles above */
+
 body {
   padding: 0px 250px;
 }
@@ -67,7 +69,7 @@ ion-icon:hover {
 }
 
 .hero-description {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 16px;
 }
 
