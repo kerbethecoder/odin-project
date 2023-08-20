@@ -30,7 +30,9 @@
           <button class="custom-button" onclick="navToSection()">
             Recipes
           </button>
-          <button class="custom-button-about">About Us</button>
+          <button class="custom-button-about" onclick="navToSection()">
+            About Us
+          </button>
         </div>
       </div>
       <img
@@ -70,7 +72,7 @@
           </div>
         </article>
       </a>
-      <a href="./recipes/funnelCakes.html" class="card">
+      <a href="./recipes/FunnelCakes/funnelCakes.html" class="card">
         <article>
           <div class="article-wrapper">
             <figure>
@@ -87,7 +89,7 @@
           </div>
         </article>
       </a>
-      <a href="./recipes/grilledTurkeyLegs.html" class="card"
+      <a href="./recipes/GrilledTurkeyLegs/grilledTurkeyLegs.html" class="card"
         ><article>
           <div class="article-wrapper">
             <figure>
@@ -124,8 +126,10 @@
 
     <script>
       function navToSection() {
-        const section = document.getElementById('recipe');
-        section.scrollIntoView({ behavior: 'smooth' });
+        const section1 = document.getElementById('recipe');
+        const section2 = document.getElementById('footer');
+        section1.scrollIntoView({ behavior: 'smooth' });
+        section2.scrollIntoView({ behavior: 'smooth' });
       }
     </script>
 
