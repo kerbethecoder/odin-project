@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  /* here */
+  height: 100vh;
+  /* here */
+  margin: 0;
+  overflow: hidden;
+  font-family: Roboto, sans-serif;
+
+  /* here */
+  display: flex;
+  flex-direction: column;
+  /* here */
+}
+
+img {
+  width: 600px;
+}
+
+button {
+  font-family: Roboto, sans-serif;
+  border: none;
+  border-radius: 8px;
+  background: #eee;
+
+  padding: 8px 16px;
+}
+
+input {
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  padding: 8px 24px;
+  width: 400px;
+  margin-bottom: 16px;
+}
+
+.header,
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content {
+  /* here */
+  flex: 1;
+  /* here */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+li {
+  list-style: none;
+}
+
+ul {
+  display: flex;
+
+  padding: 10px;
+  margin: 0;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+
+  padding: 10px;
+}
+
+.footer {
+  background: #eee;
+}
+
+/* NOTE: 
+when encountering a situation that needs to set the content into 100vh, 
+follow the css above */
