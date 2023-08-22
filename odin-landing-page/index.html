@@ -14,10 +14,10 @@
       <div class="logo">WheelsTradeCenter</div>
       <nav class="stroke">
         <ul class="navbar-links">
-          <li><a href="">Home</a></li>
-          <li><a href="">Listings</a></li>
-          <li><a href="">About Us</a></li>
-          <li><a href="">Contact Us</a></li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#listings">Listings</a></li>
+          <li><a href="#footer">About Us</a></li>
+          <li><a href="#cta">Contact Us</a></li>
         </ul>
       </nav>
     </header>
@@ -32,21 +32,25 @@
             compare, and find your dream car from the comfort of your own space.
             Redefine your car shopping experience and drive home in style today.
           </p>
-          <button class="btn">Browse Listings</button>
+          <button class="btn"><a href="#listings">Browse Listings</a></button>
         </div>
         <div class="hero-right">
           <img src="images/hero-image.jpg" alt="car image" class="hero-image" />
         </div>
       </div>
 
-      <div class="listings-wrapper flex-center">
+      <div class="listings-wrapper flex-center" id="listings">
         <h2 class="listings-heading">Car Brand Listings</h2>
         <div class="cards-wrapper flex-center">
-          <a href="#" class="card" id="anchorTag">
+          <a href="pages/redirect-page.html" class="card">
             <article>
               <div class="article-wrapper">
                 <figure>
-                  <img src="images/hyundai-brand.jpg" alt="hyundai brand car" />
+                  <img
+                    src="images/hyundai-brand.jpg"
+                    alt="hyundai brand car"
+                    loading="lazy"
+                  />
                 </figure>
                 <div class="article-body">
                   <h2>Hyundai Brand</h2>
@@ -61,11 +65,15 @@
               </div>
             </article>
           </a>
-          <a href="#" class="card" id="anchorTag">
+          <a href="pages/redirect-page.html" class="card">
             <article>
               <div class="article-wrapper">
                 <figure>
-                  <img src="images/toyota-brand.jpg" alt="toyota brand car" />
+                  <img
+                    src="images/toyota-brand.jpg"
+                    alt="toyota brand car"
+                    loading="lazy"
+                  />
                 </figure>
                 <div class="article-body">
                   <h2>Toyota Brand</h2>
@@ -80,11 +88,15 @@
               </div>
             </article>
           </a>
-          <a href="#" class="card" id="anchorTag">
+          <a href="pages/redirect-page.html" class="card">
             <article>
               <div class="article-wrapper">
                 <figure>
-                  <img src="images/nissan-brand.jpg" alt="nissan brand car" />
+                  <img
+                    src="images/nissan-brand.jpg"
+                    alt="nissan brand car"
+                    loading="lazy"
+                  />
                 </figure>
                 <div class="article-body">
                   <h2>Nissan Brand</h2>
@@ -99,11 +111,15 @@
               </div>
             </article>
           </a>
-          <a href="#" class="card" id="anchorTag">
+          <a href="pages/redirect-page.html" class="card">
             <article>
               <div class="article-wrapper">
                 <figure>
-                  <img src="images/kia-brand.jpg" alt="kia brand car" />
+                  <img
+                    src="images/kia-brand.jpg"
+                    alt="kia brand car"
+                    loading="lazy"
+                  />
                 </figure>
                 <div class="article-body">
                   <h2>Kia Brand</h2>
@@ -118,11 +134,15 @@
               </div>
             </article>
           </a>
-          <a href="#" class="card" id="anchorTag">
+          <a href="pages/redirect-page.html" class="card">
             <article>
               <div class="article-wrapper">
                 <figure>
-                  <img src="images/ford-brand.jpg" alt="ford brand car" />
+                  <img
+                    src="images/ford-brand.jpg"
+                    alt="ford brand car"
+                    loading="lazy"
+                  />
                 </figure>
                 <div class="article-body">
                   <h2>Ford Brand</h2>
@@ -148,7 +168,7 @@
         <cite>&mdash; Sean Hampton</cite>
       </div>
 
-      <div class="cta-wrapper">
+      <div class="cta-wrapper" id="cta">
         <div class="cta flex-between">
           <div class="left-cta">
             <h3>Wanna know more about the developer?</h3>
@@ -158,7 +178,14 @@
               us, and we're here to help."
             </p>
           </div>
-          <button class="btn" style="border: 3px solid #eee">Contact Us</button>
+          <button class="btn" style="border: 3px solid #eee">
+            <a
+              href="pages/contact-page.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Contact Us</a
+            >
+          </button>
         </div>
       </div>
     </main>
@@ -167,11 +194,17 @@
       <p class="footer-para">
         This is for educational purposes only. All the images, statements, and
         other contents belong to their respectful owners. The website is only
-        for compliance with the lesson of The Odin Project
+        for compliance with the lesson of The Odin Project. Here are the
+        <a
+          href="pages/sources-page.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          >image sources.</a
+        >
       </p>
-      <p>@kerbethecoder | Web Developer | &copy; 2023</p>
+      <p style="color: #eeeeeeda; margin-bottom: 32px">
+        @kerbethecoder | Web Developer | &copy; 2023
+      </p>
     </footer>
-
-    <script></script>
   </body>
 </html>

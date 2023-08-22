@@ -1,0 +1,27 @@
+* {
+  background: var(--bg-light);
+
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+  color: var(--bg-dark);
+}
+
+h1 {
+  font-size: 20px;
+  color: darkgray;
+
+  padding: 0 480px;
+}
+
+.wrapper {
+  height: 100vh;
+
+  flex-direction: column;
+  gap: 20px;
+}
+
+main a {
+  text-decoration: underline;
+}

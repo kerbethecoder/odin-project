@@ -28,6 +28,8 @@
 a {
   color: unset;
   text-decoration: none;
+
+  background: none;
 }
 
 ul,
