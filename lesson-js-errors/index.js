@@ -1,5 +1,5 @@
 let randomNumber = Math.floor(Math.random() * 100) + 1;
-console.log(randomNumber);
+// console.log(randomNumber);
 
 const guesses = document.querySelector('.guesses');
 const lastResult = document.querySelector('.lastResult');
