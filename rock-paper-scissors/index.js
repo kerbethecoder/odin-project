@@ -1,13 +1,13 @@
-console.log(`Eveybody Ready?! Let's play! Rock, Paper, Scissors, Shoot!`);
-console.log(`Waiting for the player's choice...`);
-console.log('');
-// rock-paper-scissor
+const computerChoice = document.querySelector('#computerChoice');
+const playerChoice = document.querySelector('#playerChoice');
 
-//pseudocode
-//function getComputerChoice
-//make a list of choices
-//get the index = mathrandom * choice list -> round off
-//return the choice
+let playerScoreValue = 0;
+let computerScoreValue = 0;
+const playerScoreContainer = document.querySelector('#playerScore');
+const computerScoreContainer = document.querySelector('#computerScore');
+
+playerScoreContainer.textContent = `Player Score : ${playerScoreValue}`;
+computerScoreContainer.textContent = `Computer Score : ${computerScoreValue}`;
 
 function getComputerChoice() {
   const CHOICES = ['rock', 'paper', 'scissors'];
@@ -15,94 +15,136 @@ function getComputerChoice() {
   return CHOICES[Math.floor(Math.random() * CHOICES.length)];
 }
 
-// console.log(getComputerChoice());
+const computerChoiceImg = document.querySelector('#computerChoiceImg');
+const computerChoiceImgElement = document.createElement('img');
 
-//pseudocode
-//function playGame
-//takes 2 parameters, computerchoice and player choice
-//user input for rock, paper, or scissors
-//lowercase the user input
+function displayComputerChoice() {
+  computerChoice.textContent = getComputerChoice();
+  computerChoiceImgElement.width = 100;
+  computerChoiceImgElement.height = 100;
 
-//if computerchoice == paper && playerchoice == paper; draw
-//if computerchoice == paper && playerchoice == rock; computer wins
-//if computerchoice == paper && playerchoice == scissor; player wins
+  while (computerChoiceImg.firstChild) {
+    computerChoiceImg.removeChild(computerChoiceImg.firstChild);
+  }
 
-//if computerchoice == scissor && playerchoice == paper; computer wins
-//if computerchoice == scissor && playerchoice == rock; player wins
-//if computerchoice == scissor && playerchoice == scissor; draw
+  if (computerChoice.textContent === 'scissors') {
+    computerChoiceImgElement.src = `assets/${computerChoice.textContent}.png`;
+    computerChoiceImgElement.alt = `${computerChoice.textContent}`;
 
-//if computerchoice == rock && playerchoice == paper; player wins
-//if computerchoice == rock && playerchoice == rock; draw
-//if computerchoice == rock && playerchoice == scissor; computer wins
+    computerChoiceImg.appendChild(computerChoiceImgElement);
+  } else if (computerChoice.textContent === 'rock') {
+    computerChoiceImgElement.src = `assets/${computerChoice.textContent}.png`;
+    computerChoiceImgElement.alt = `${computerChoice.textContent}`;
 
-let playerScore = 0;
-let computerScore = 0;
+    computerChoiceImg.appendChild(computerChoiceImgElement);
+  } else {
+    computerChoiceImgElement.src = `assets/${computerChoice.textContent}.png`;
+    computerChoiceImgElement.alt = `${computerChoice.textContent}`;
+
+    computerChoiceImg.appendChild(computerChoiceImgElement);
+  }
+}
+
+const gameResult = document.querySelector('#result');
 
 function playGame(comp, player) {
   if (comp == 'paper' && player == 'paper') {
-    return `---It's a DRAW! Let's go again! Hiyaaah!---`;
+    gameResult.textContent = `Paper vs. Paper? It's a draw! Go again!`;
   } else if (comp == 'paper' && player == 'rock') {
-    computerScore++;
-    return `---Computer wins!---`;
+    computerScoreValue++;
+    gameResult.textContent = `You lose! Paper beats Rock.`;
   } else if (comp == 'paper' && player == 'scissors') {
-    playerScore++;
-    return `---Player wins!---`;
-  } else if (comp == 'scissors' && player == 'paper') {
-    computerScore++;
-    return `---Computer wins!---`;
-  } else if (comp == 'scissors' && player == 'rock') {
-    playerScore++;
-    return `---Player wins!---`;
+    playerScoreValue++;
+    gameResult.textContent = `You win! Scissors beats Paper.`;
   } else if (comp == 'scissors' && player == 'scissors') {
-    return `---It's a DRAW! Let's go again! Hiyaaah!---`;
-  } else if (comp == 'rock' && player == 'paper') {
-    playerScore++;
-    return `---Player wins!---`;
+    gameResult.textContent = `It's a draw! Scissors vs. Scissors, really? C'mon, once more!`;
+  } else if (comp == 'scissors' && player == 'paper') {
+    computerScoreValue++;
+    gameResult.textContent = `You lose! Scissors beats Paper.`;
+  } else if (comp == 'scissors' && player == 'rock') {
+    playerScoreValue++;
+    gameResult.textContent = `You win! Rock beats Scissors.`;
   } else if (comp == 'rock' && player == 'rock') {
-    return `---It's a DRAW! Let's go again! Hiyaaah!---`;
+    gameResult.textContent = `Ugh, Rock vs. Rock, it's a draw! Another round!`;
+  } else if (comp == 'rock' && player == 'paper') {
+    playerScoreValue++;
+    gameResult.textContent = `You win! Paper beats Rock.`;
   } else if (comp == 'rock' && player == 'scissors') {
-    computerScore++;
-    return `---Computer wins!---`;
-  } else return '---What the dUcK?? Wrong spelling tHeMasS!---';
+    computerScoreValue++;
+    gameResult.textContent = `You lose! Rock beats Scissors.`;
+  } else {
+    gameResult.textContent = `Something's wrong, try again later.`;
+  }
+
+  if (gameResult.textContent.includes('win')) {
+    gameResult.style.color = '#06D6A0';
+  } else if (gameResult.textContent.includes('lose')) {
+    gameResult.style.color = '#EF476F';
+  } else if (gameResult.textContent.includes('draw')) {
+    gameResult.style.color = '#FFD166';
+  } else gameResult.style.color = '#1a1a1a';
+
+  playerScoreContainer.textContent = `Player Score : ${playerScoreValue}`;
+  computerScoreContainer.textContent = `Computer Score : ${computerScoreValue}`;
 }
 
-// const playerChoice = 'paper';
+const optionRock = document.querySelector('#rock');
+const optionPaper = document.querySelector('#paper');
+const optionScissors = document.querySelector('#scissors');
+const playerChoiceImg = document.querySelector('#playerChoiceImg');
+const playerChoiceElement = document.createElement('img');
+playerChoiceElement.width = 100;
+playerChoiceElement.height = 100;
 
-//final game
-//make a variable that stores a game score between the player and the computer
-//for loop 5 games
-//after looping, deduce the results and declare the winner
-for (let rounds = 1; rounds <= 5; rounds++) {
-  const playerChoice = prompt(`Would you please enter you choice?^^`);
-  const computerChoice = getComputerChoice();
-  if (playerChoice == null) {
-    console.log('The game is closing! Thank You! ^^');
-    console.log('');
-    break;
-  } else if (
-    playerChoice == 'paper' ||
-    playerChoice == 'rock' ||
-    playerChoice == 'scissors'
-  ) {
-    console.log(`PLAYER: '${playerChoice}'`);
-    console.log(`COMPUTER: '${computerChoice}'`);
-    console.log('');
-    console.log(`${playGame(computerChoice, playerChoice)}`);
-    console.log('');
-  } else {
-    console.log('Beach, wrong answer! Try again next game!');
-    console.log('');
-    break;
+const modalActive = document.querySelector('#modal');
+const restartBtn = document.querySelector('#restartBtn');
+
+function restartGame() {
+  modalActive.classList.remove('active');
+
+  gameResult.textContent = 'Rock, Paper, or Scissors? What is it gonna be?';
+  gameResult.style.color = '#1a1a1a';
+  computerChoice.textContent = '?';
+  playerChoice.textContent = '?';
+  computerChoiceImg.removeChild(computerChoiceImg.firstChild);
+  playerChoiceImg.removeChild(playerChoiceImg.firstChild);
+  computerScoreValue = 0;
+  computerScoreContainer.textContent = `Computer Score : ${computerScoreValue}`;
+  playerScoreValue = 0;
+  playerScoreContainer.textContent = `Player Score : ${playerScoreValue}`;
+}
+
+const modalTitle = document.querySelector('#modalTitle');
+
+function handleClickEvent(playerSelection) {
+  if (playerScoreValue === 5) {
+    modalActive.classList.add('active');
+    modalTitle.textContent = 'Congratulations, you win! Play again?';
+    restartBtn.addEventListener('click', () => restartGame());
+  } else if (computerScoreValue === 5) {
+    modalActive.classList.add('active');
+    modalTitle.textContent = 'Too bad, you lose! Play Again?';
+    restartBtn.addEventListener('click', () => restartGame());
+  }
+
+  displayComputerChoice();
+  playerChoice.textContent = playerSelection;
+  playerChoiceElement.src = `assets/${playerSelection}.png`;
+  playerChoiceElement.alt = playerSelection;
+  playerChoiceImg.appendChild(playerChoiceElement);
+  playGame(computerChoice.textContent, playerSelection);
+
+  if (playerScoreValue === 5) {
+    modalActive.classList.add('active');
+    modalTitle.textContent = 'Congratulations, you win! Play again?';
+    restartBtn.addEventListener('click', () => restartGame());
+  } else if (computerScoreValue === 5) {
+    modalActive.classList.add('active');
+    modalTitle.textContent = 'Too bad, you lose! Play Again?';
+    restartBtn.addEventListener('click', () => restartGame());
   }
 }
-console.log(`Score: 
-PLAYER: ${playerScore} COMPUTER: ${computerScore} `);
-if (playerScore > computerScore) {
-  console.log('Congratulations! The PLAYER wins!');
-} else if (computerScore > playerScore) {
-  console.log('Too bad! The Computer wins!');
-} else console.log('Yoink! DRAW! ^^');
 
-// if playerchoice is null; break
-// if playerchoice is paper, rock, scissors; loop
-// else try again
+optionRock.addEventListener('click', () => handleClickEvent('rock'));
+optionPaper.addEventListener('click', () => handleClickEvent('paper'));
+optionScissors.addEventListener('click', () => handleClickEvent('scissors'));
